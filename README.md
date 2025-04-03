@@ -1,5 +1,5 @@
 # Welcome to your Lovable project 
-## Here is the prodject LINK To View : https://mood-bloom-cycle.lovable.app/
+## Here is the project LINK To View : https://mood-bloom-cycle.lovable.app/
 
 ## Project info
 
