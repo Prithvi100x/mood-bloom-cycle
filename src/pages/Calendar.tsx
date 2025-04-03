@@ -70,10 +70,10 @@ const CalendarPage = () => {
                   onSelect={setSelectedDate}
                   className="rounded-md border"
                   components={{
-                    DayContent: ({ day }) => (
+                    DayContent: (props) => (
                       <div className="relative w-full h-full flex items-center justify-center">
-                        {day.day}
-                        {getDayIndicator(day.date)}
+                        {format(props.date, 'd')}
+                        {getDayIndicator(props.date)}
                       </div>
                     )
                   }}
