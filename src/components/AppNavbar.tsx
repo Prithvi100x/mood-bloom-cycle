@@ -7,7 +7,7 @@ const AppNavbar: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg rounded-t-2xl overflow-hidden z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg rounded-t-2xl overflow-hidden z-50">
       <div className="flex justify-around items-center h-16 max-w-md mx-auto">
         <NavItem 
           to="/" 
@@ -58,7 +58,7 @@ const NavItem: React.FC<NavItemProps> = ({ to, icon, label, isActive }) => {
       className={`flex flex-col items-center justify-center w-16 ${
         isActive 
           ? 'text-primary' 
-          : 'text-gray-500 dark:text-gray-400'
+          : 'text-muted-foreground hover:text-foreground transition-colors'
       }`}
     >
       <div className="mb-1">{icon}</div>

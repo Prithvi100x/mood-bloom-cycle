@@ -15,8 +15,11 @@ import {
   Calendar 
 } from 'lucide-react';
 import AppNavbar from '@/components/AppNavbar';
+import { useTheme } from '@/hooks/useTheme';
 
 const SettingsPage = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className="min-h-screen bg-background pb-20">
       <div className="container px-4 py-6 max-w-md mx-auto">
@@ -29,6 +32,7 @@ const SettingsPage = () => {
 
         <ScrollArea className="h-[calc(100vh-10rem)]">
           <div className="space-y-6">
+            {/* Account Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -57,6 +61,7 @@ const SettingsPage = () => {
               </CardContent>
             </Card>
 
+            {/* Cycle Preferences Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -85,6 +90,7 @@ const SettingsPage = () => {
               </CardContent>
             </Card>
 
+            {/* Notifications Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -123,6 +129,7 @@ const SettingsPage = () => {
               </CardContent>
             </Card>
 
+            {/* Appearance Card with Dark Mode Toggle */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -136,11 +143,15 @@ const SettingsPage = () => {
                     <h3 className="text-sm font-medium">Dark Mode</h3>
                     <p className="text-sm text-muted-foreground">Switch between light and dark themes</p>
                   </div>
-                  <Switch />
+                  <Switch 
+                    checked={theme === 'dark'} 
+                    onCheckedChange={toggleTheme}
+                  />
                 </div>
               </CardContent>
             </Card>
 
+            {/* Privacy & Security Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -169,6 +180,7 @@ const SettingsPage = () => {
               </CardContent>
             </Card>
 
+            {/* Help & Support Card */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
