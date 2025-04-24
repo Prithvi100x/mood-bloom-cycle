@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import MoodSelector from '@/components/MoodSelector';
 import CycleTracker from '@/components/CycleTracker';
 import FoodRecommendations from '@/components/FoodRecommendations';
+import NotesDisplay from '@/components/NotesDisplay';
 import { useCycle } from '@/context/CycleContext';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -82,6 +83,8 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <NotesDisplay />
 
             <CycleTracker 
               currentCycle={userData.currentCycle}

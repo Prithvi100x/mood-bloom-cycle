@@ -11,28 +11,28 @@ const AppNavbar: React.FC = () => {
       <div className="flex justify-around items-center h-16 max-w-md mx-auto">
         <NavItem 
           to="/" 
-          icon={<Home size={24} className="transition-all duration-300 hover:stroke-[2.5px]" />} 
+          icon={<Home size={24} className="transition-all duration-300 hover:stroke-[2.5px]" color="#1A1F2C" />} 
           label="Home" 
           isActive={location.pathname === '/'}
           activeColor="text-bloom-500 drop-shadow-[0_0_3px_rgba(236,72,153,0.5)]"
         />
         <NavItem 
           to="/calendar" 
-          icon={<CalendarDays size={24} className="transition-all duration-300 hover:stroke-[2.5px]" />} 
+          icon={<CalendarDays size={24} className="transition-all duration-300 hover:stroke-[2.5px]" color="#221F26" />} 
           label="Calendar" 
           isActive={location.pathname === '/calendar'}
           activeColor="text-lavender-500 drop-shadow-[0_0_3px_rgba(139,92,246,0.5)]"
         />
         <NavItem 
           to="/food" 
-          icon={<Utensils size={24} className="transition-all duration-300 hover:stroke-[2.5px]" />} 
+          icon={<Utensils size={24} className="transition-all duration-300 hover:stroke-[2.5px]" color="#222222" />} 
           label="Food" 
           isActive={location.pathname === '/food'}
           activeColor="text-mint-500 drop-shadow-[0_0_3px_rgba(34,197,94,0.5)]"
         />
         <NavItem 
           to="/insights" 
-          icon={<BarChart2 size={24} className="transition-all duration-300 hover:stroke-[2.5px]" />} 
+          icon={<BarChart2 size={24} className="transition-all duration-300 hover:stroke-[2.5px]" color="#333333" />} 
           label="Insights" 
           isActive={location.pathname === '/insights'}
           activeColor="text-sky-500 drop-shadow-[0_0_3px_rgba(14,165,233,0.5)]"
